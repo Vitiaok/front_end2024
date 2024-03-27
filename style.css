@@ -5,20 +5,13 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 /* Classes and IDs */
 .title {
     text-align: center;
     color: blue;
-}
-
-.book {
-    border: 2px solid black;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 10px;
-    background-color: #fff;
 }
 
 #email {
@@ -39,21 +32,85 @@ a:hover {
     color: red;
 }
 
-/* CSS3 animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+.bookBlock{
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    color: #333;
+    text-transform: uppercase;
+    border-radius: 10px;
+    line-height: 1.6;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.howToWinFriendsAndInfluencePeople {
-    animation: fadeIn 1s ease-in-out;
+#lawsOfPower {
+    font-style: italic;
+    opacity: 0.8;
+    
 }
 
-@keyframes fadeIn48Laws {
-    from { opacity: 0; }
-    to { opacity: 1; }
+#howToWinFriends:hover {
+    color: red; /* Зміна кольору тексту при наведенні курсора */
 }
 
-.LawsOfPower48 {
-    animation: fadeIn48Laws 1s ease-in-out;
+/* Груповий селектор */
+.bookBlock p, #lawsOfPower p {
+    line-height: 1.5;
 }
+
+/* Псевдокласи */
+a:hover {
+    color: #ff6600;
+    text-decoration: underline;
+}
+
+/* Вкладений селектор */
+#howToWinFriends ul li {
+    list-style-type: circle;
+}
+
+/* Властивості для гіперпосилань */
+a {
+    /* Колір та стиль посилань */
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    /* Зміна кольору при наведенні */
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Властивості для списків */
+#howToWinFriends ul {
+    /* Списки */
+    list-style-type: disc;
+}
+
+/* Властивості для display */
+#howToWinFriends img {
+    /* Відображення */
+    display: block;
+    margin: 0 auto;
+}
+
+/* Властивості для inline-block */
+#howToWinFriends h3 {
+    /* Inline-block */
+    display: inline-block;
+}
+
+/* Властивості для pseudo-class */
+.howToWinFriendsAndInfluencePeople a:visited {
+    /* Стиль для відвіданих посилань */
+    color: #6c757d;
+}
+
+
