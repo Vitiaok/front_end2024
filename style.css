@@ -1,0 +1,59 @@
+/* External CSS */
+/* Global styles */
+body {
+    background-color: #f2f2f2;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Classes and IDs */
+.title {
+    text-align: center;
+    color: blue;
+}
+
+.book {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    background-color: #fff;
+}
+
+#email {
+    width: 200px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Group selector */
+h3, p {
+    color: green;
+}
+
+/* Pseudo-class */
+a:hover {
+    text-decoration: underline;
+    color: red;
+}
+
+/* CSS3 animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.howToWinFriendsAndInfluencePeople {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn48Laws {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.LawsOfPower48 {
+    animation: fadeIn48Laws 1s ease-in-out;
+}
