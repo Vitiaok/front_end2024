@@ -4,7 +4,6 @@
     <title>The best selfhelp books</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <style>
-        /* Inline CSS */
         body {
             font-family: Arial, sans-serif;
         }
@@ -13,6 +12,10 @@
 </head>
 
 <body>
+<div class="container">
+<div class="addBlock"></div>
+<div class="centralColumn">
+<div id="info" class="smallBlock">
 <h1>Найкращі книги жанру допоможи собі сам</h1>
 <p>Впевнено крокуючи шляхом особистого зростання та досягнень, книги у жанрі "допоможи собі сам" стають важливим компаньйоном на цьому непередбачуваному, але захопливому подорожі. 
 Їхнє значення у сучасному світі стає все більш невід'ємним, адже вони не просто надають поради, але й відкривають двері у світ внутрішнього самовдосконалення та розуміння.
@@ -57,8 +60,9 @@
        </tr>
        </table>
 </p>
+</div>
 
-<div id="sevenHabits" class="bookBlock selfHelp">
+<div id="sevenHabits" class="smallBlock">
     <h3><i>"7 звичок надзвичайно ефективних людей" Стівен Р. Кові</i></h3>
 
 
@@ -99,7 +103,7 @@
     <a href="https://www.youtube.com/watch?v=8k2Iz4Gvyv8" target="_blank">Огляд даної книги на Youtube</a>
 </div>
 
-<div id="emotionalIntelligence" class="bookBlock selfHelp">
+<div id="emotionalIntelligence" class="smallBlock">
     <h3><i>"Емоційний інтелект" Деніел Гоулман</i></h3>
     <p><img src="image/emotionalInteligence.jpg" alt="Емоційний інтелект. Фото обкладинки" width="300" height="445" usemap="#workmap2">
         <map name="workmap2">
@@ -122,7 +126,7 @@
     <a href="https://www.youtube.com/watch?v=4FpLkTgc-3o" target="_blank">Огляд даної книги на Youtube</a>
 </div>
 
-<div id="atomicHabits" class="bookBlock selfHelp">
+<div id="atomicHabits" class="smallBlock">
     <h3><i>"Атомні звички" Джеймс Клір</i></h3>
     <p><img src="image/AtomicHabits.jpg" alt="Атомні звички. Фото обкладинки" width="300" height="445" usemap="#workmap3">
         <map name="workmap3">
@@ -142,7 +146,7 @@
     <a href="https://www.youtube.com/watch?v=oG0B0CRXUa8" target="_blank">Огляд даної книги на Youtube</a>
 </div>
 
-<div id="howToWinFriends" class="bookBlock selfHelp">
+<div id="howToWinFriends" class="smallBlock">
     <h3><i>"Як здобувати друзів та впливати на людей" Дейл Карнегі</i></h3>
     <p><img src="image/howToWinFriendsAndInfluencePeople.jpeg" alt="Як здобувати друзів та впливати на людей. Фото обкладинки" width="300" height="445" usemap="#workmap4">
         <map name="workmap4">
@@ -171,7 +175,7 @@
     <a href="https://www.youtube.com/watch?v=vsgW1FTuqxk" target="_blank">Огляд даної книги на Youtube</a>
 </div>
 
-<div id="lawsOfPower" class="bookBlock selfHelp">
+<div id="lawsOfPower" class="smallBlock">
     <h3><i>"48 законів влади" Роберт Грін</i></h3>
     <p><img src="image/48LawsOfPower.jpg" alt="48 законів влади. Фото обкладинки" width="300" height="445" usemap="#workmap5">
         <map name="workmap5">
@@ -191,49 +195,53 @@
         Правила владної гри
     </p>       
     <a href="https://www.youtube.com/watch?v=vbns-qxVfo4" target="_blank">Огляд даної книги на Youtube</a>
-</div>
-<div id="bookSending" class="forms">
-<h4>Надайте нам інформацію про вас і ваші вподобання, щоб ми могли надсилати вам підбірки книг</h4>
-<form>
-    <label for="email">Поштова скринька:</label>
-    <br>
-    <input type="email" id="email" name="email">
-</form>
-<form>
-    <label for="name">Ваше ім'я:</label><br>
-    <input type="text" id="name" name="name"><br>
-</form>
-<p>Як часто надсилати підбірку?</p>
-<form>
-<input type="radio" id="weekly" name="send_freq" value="Щотижня">
-<label for="Щотижня">Щотижня</label><br>
-<input type="radio" id="montly" name="send_freq" value="Щомісяця">
-<label for="Щомісяця">Щомісяця</label><br>
-<input type="radio" id="halfyear" name="send_freq" value="Раз у півроку">
-<label for="Раз у півроку">Раз у пів року</label><br><br>
-</form> 
-<p>Який жанри книг вам підбирати?</p>
-<form>
-    <input type="checkbox" id="genre1" name="genre1" value="Self-help">
-    <label for="genre1">Допоможи собі сам</label><br>
-    <input type="checkbox" id="genre2" name="genre2" value="Fiction">
-    <label for="genre2">Художні</label><br>
-    <input type="checkbox" id="genre3" name="genre3" value="Non-fiction">
-    <label for="genre3">Нонфікшн</label><br><br>
-</form> 
-<form>
-    <label for="quantity">Кількість книг у підбірці:</label>
-    <input type="number" id="quantity" name="quantity" min="5" max="15">
-</form>
-<form>
-    <label for="favbook">Додайте посилання на вашу улюблену книгу на сайті будь-якого книжкового магазину:</label>
-    <br>
-    <input type="url" id="favbook" name="favbook">
-    <br>
-    <input type="submit" value="Надіслати">
-</form>
+    
 </div>
 
+    <div id="bookSending" class="smallBlock">
+    <h4>Надайте нам інформацію про вас і ваші вподобання, щоб ми могли надсилати вам підбірки книг</h4>
+    <form>
+        <label for="email">Поштова скринька:</label>
+        <br>
+        <input type="email" id="email" name="email">
+    </form>
+    <form>
+        <label for="name">Ваше ім'я:</label><br>
+        <input type="text" id="name" name="name"><br>
+    </form>
+    <p>Як часто надсилати підбірку?</p>
+    <form>
+    <input type="radio" id="weekly" name="send_freq" value="Щотижня">
+    <label for="Щотижня">Щотижня</label><br>
+    <input type="radio" id="montly" name="send_freq" value="Щомісяця">
+    <label for="Щомісяця">Щомісяця</label><br>
+    <input type="radio" id="halfyear" name="send_freq" value="Раз у півроку">
+    <label for="Раз у півроку">Раз у пів року</label><br><br>
+    </form> 
+    <p>Який жанри книг вам підбирати?</p>
+    <form>
+        <input type="checkbox" id="genre1" name="genre1" value="Self-help">
+        <label for="genre1">Допоможи собі сам</label><br>
+        <input type="checkbox" id="genre2" name="genre2" value="Fiction">
+        <label for="genre2">Художні</label><br>
+        <input type="checkbox" id="genre3" name="genre3" value="Non-fiction">
+        <label for="genre3">Нонфікшн</label><br><br>
+    </form> 
+    <form>
+        <label for="quantity">Кількість книг у підбірці:</label>
+        <input type="number" id="quantity" name="quantity" min="5" max="15">
+    </form>
+    <form>
+        <label for="favbook">Додайте посилання на вашу улюблену книгу на сайті будь-якого книжкового магазину:</label>
+        <br>
+        <input type="url" id="favbook" name="favbook">
+        <br>
+        <input type="submit" value="Надіслати">
+    </form>
+</div>
+</div>
+<div class="addBlock2"></div>
+</div>
 
 
 </body>
