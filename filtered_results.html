@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Filtered Survey Results</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .filter-label {
+        font-size: 20px; /* Задайте бажаний розмір шрифту для підписів фільтрів */
+    }
+</style>
+</head>
+<body>
+<h2>Filtered Survey Results</h2>
+<div id="results"></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Отримайте дані опитування з localStorage
+    const surveys = JSON.parse(localStorage.getItem('surveys'));
+
+    // Фільтруйте дані за значенням genre1
+    const genreFilter = 'Fiction';
+    const filteredSurveysByGenre = surveys.filter(survey => survey.genre2 === genreFilter);
+
+    // Фільтруйте дані за значенням send_freq
+    const frequencyFilter = 'Щотижня';
+    const filteredSurveysByFrequency = surveys.filter(survey => survey.send_freq === frequencyFilter);
+
+    // Фільтруйте дані за значенням quantity
+    const minQuantity = 5;
+    const maxQuantity = 6;
+    const filteredSurveysByQuantity = surveys.filter(survey => survey.quantity >= minQuantity && survey.quantity <= maxQuantity);
+
+    console.log(filteredSurveysByGenre); // Виведіть результати фільтрації в консоль
+    console.log(filteredSurveysByFrequency); // Виведіть результати фільтрації в консоль
+    console.log(filteredSurveysByQuantity); // Виведіть результати фільтрації в консоль
+
+    // Отримайте контейнер для результатів
+    const resultsContainer = document.getElementById('results');
+
+    // Відобразіть результати фільтрації за genre1
+    if (filteredSurveysByGenre.length > 0) {
+        const genreUl = document.createElement('ul');
+        const genreLi = document.createElement('li');
+        genreLi.textContent = 'Результати фільтрації за жанром: ' + genreFilter;
+        genreUl.appendChild(genreLi);
+        filteredSurveysByGenre.forEach(survey => {
+            const li = document.createElement('li');
+            li.textContent = JSON.stringify(survey);
+            genreUl.appendChild(li);
+        });
+        resultsContainer.appendChild(genreUl);
+    } else {
+        resultsContainer.textContent = 'Немає результатів для відображення за жанром: ' + genreFilter;
+    }
+
+    // Відобразіть результати фільтрації за send_freq
+    if (filteredSurveysByFrequency.length > 0) {
+        const frequencyUl = document.createElement('ul');
+        const frequencyLi = document.createElement('li');
+        frequencyLi.textContent = 'Результати фільтрації за частотою надсилання: ' + frequencyFilter;
+        frequencyUl.appendChild(frequencyLi);
+        filteredSurveysByFrequency.forEach(survey => {
+            const li = document.createElement('li');
+            li.textContent = JSON.stringify(survey);
+            frequencyUl.appendChild(li);
+        });
+        resultsContainer.appendChild(frequencyUl);
+    } else {
+        resultsContainer.textContent = 'Немає результатів для відображення за частотою надсилання: ' + frequencyFilter;
+    }
+
+    // Відобразіть результати фільтрації за quantity
+    if (filteredSurveysByQuantity.length > 0) {
+        const quantityUl = document.createElement('ul');
+        const quantityLi = document.createElement('li');
+        quantityLi.textContent = 'Результати фільтрації за кількістю книг у підбірці: ' + minQuantity + '-' + maxQuantity;
+        quantityUl.appendChild(quantityLi);
+        filteredSurveysByQuantity.forEach(survey => {
+            const li = document.createElement('li');
+            li.textContent = JSON.stringify(survey);
+            quantityUl.appendChild(li);
+        });
+        resultsContainer.appendChild(quantityUl);
+    } else {
+        resultsContainer.textContent = 'Немає результатів для відображення за кількістю книг у підбірці: ' + minQuantity + '-' + maxQuantity;
+    }
+});
+
+
+</script>
+</body>
+</html>
