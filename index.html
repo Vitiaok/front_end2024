@@ -232,8 +232,22 @@
     </form>
     <form>
         <label for="name">Ваше ім'я:</label><br>
-        <input type="text" id="name" name="name"><br>
+        <input type="text" id="name" name="name"><br><br>
     </form>
+    <p style="text-align: center;">Якої ви вікової групи?</p>
+    <select id="select">
+        <option value="value1" selected>0-18</option>
+        <option value="value2">18-30</option>
+        <option value="value3">30-45</option>
+        <option value="value4">45-60</option>
+        <option value="value5">60+</option>
+    </select>
+    <br><br>
+    <form>
+        <label for="phone">Введіть номер телефону:</label><br>
+        <input type="tel" id="phone" name="phone" placeholder="(012)-34-567-89" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required><br><br>
+        
+      </form>
     <p style="text-align: center;">Як часто надсилати підбірку?</p>
     <form>
     <input type="radio" id="weekly" name="send_freq" value="Щотижня">
@@ -256,13 +270,24 @@
         <label for="quantity">Кількість книг у підбірці:</label>
         <input type="number" id="quantity" name="quantity" min="5" max="15">
         <br>
+        <br>
     </form>
+    <form>
+        <label for="date">Коли ви відвідали наш сайт?</label>
+        <input type="date" id="date" name="date">
+        <br>
+        <br>
+      </form>
     <form>
         <label for="favbook">Додайте посилання на вашу улюблену книгу на сайті будь-якого книжкового магазину:</label>
         <br>
         <input type="url" id="favbook" name="favbook">
         <br>
         <br>
+        <label for="myfile">Або додайте її у вигляді PDF-файлу:</label>
+        <input type="file" id="myfile" name="myfile"><br><br>
+        <br>
+
         <input type="submit" value="Надіслати">
     </form>
 </div>

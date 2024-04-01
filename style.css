@@ -11,16 +11,17 @@ body {
     color: blue;
 }
 
-#email, #name, #favbook, #quantity {
+#email, #name, #favbook, #quantity, #date, #phone, #select{
     width: 200px;
     padding: 5px;
     border-radius: 5px;
     border: 1px solid #ccc;
 }
 
-#quantity {
-    width: 50px;
+#quantity, #select {
+    width: 80px;
 }
+
 
 a {
     color: #007bff;
