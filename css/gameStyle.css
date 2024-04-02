@@ -1,3 +1,8 @@
+canvas{
+    border: 1px solid #d3d3d3;
+    background-color: #f1f1f1;
+}
+
 body {
     background-color: #EADDCA;
     color: #333;
@@ -132,13 +137,7 @@ tr:hover {
     overflow: visible;
 }
 
-.smallBlock.animate {
-    animation-name: fadeIn; /* Назва анімації */
-    animation-duration: 1s; /* Тривалість анімації */
-    animation-timing-function: ease-in-out; /* Функція затримки анімації */
-    animation-fill-mode: forwards; /* Зберігати стилі на кінці анімації */
-    opacity: 0; /* Початкова прозорість */
-}
+
 
 @keyframes example {
     0% {background-color: #ffffff;} /* Від червоного */
@@ -147,14 +146,6 @@ tr:hover {
 }
 
 
-@keyframes fadeIn {
-    from {
-        opacity: 0; /* Початкова прозорість */
-    }
-    to {
-        opacity: 1; /* Кінцева прозорість */
-    }
-}
 
 .addBlock {
     left: 2%;
@@ -163,6 +154,10 @@ tr:hover {
 
 .addBlock2 {
     right:2%;
+}
+
+.smallBlock, .addBlock, .addBlock2{
+    min-height: 70vh;
 }
 
 .centralColumn {
@@ -292,17 +287,3 @@ nav {
         width: 0.5%; /* Зменшити ширину блоків */
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
