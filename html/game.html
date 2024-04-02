@@ -8,6 +8,46 @@
         body {
             font-family: Arial, sans-serif;
         }
+        #gameOver {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            color: red;
+            display: none;
+        }
+        #restartButton {
+            position: absolute;
+            top: 60%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            display: none;
+        }
+        #viewTopScoresButton {
+            position: absolute;
+            top: 60%;
+            left: 60%;
+            transform: translate(-50%, -50%);
+            font-size: 18px;
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #topScores {
+        margin-top: 10px;
+        }
+       
     </style>
     <title>The best selfhelp books</title>
 </head>
@@ -71,6 +111,10 @@
 </div>
 <div class="addBlock2"></div>
 </div>
+<div id="gameOver">Game Over</div>
+<button id="viewTopScoresButton" onclick="showTopScores()">Топ-результати</button>
+<div id="topScores"></div>
+<button id="restartButton" onclick="restartGame()">Restart</button>
 
 <script src="../js/game.js"></script>
 </body>
