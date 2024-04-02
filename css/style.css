@@ -124,9 +124,8 @@ tr:hover {
     border: 1px solid #ccc;
     padding: 20px;
     font-family: Arial, sans-serif;
-    font-size: 12px;
+    font-size: 16px;
     color: #433;
-    text-transform: uppercase;
     border-radius: 10px;
     line-height: 1.6;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -245,8 +244,6 @@ nav {
     display: none;
 }
 
-
-
 @media screen and (max-width: 768px) {
     .menu {
         display: none;
@@ -288,8 +285,38 @@ nav {
 }
 
 
-
-
+#quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  #question {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  #answers {
+    margin-bottom: 20px;
+  }
+  
+  .answer-option {
+    margin-bottom: 10px;
+  }
+  
+  #submit-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #result {
+    margin-top: 20px;
+    font-weight: bold;
+    display: none;
+  }
 
 
 
